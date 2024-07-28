@@ -1,0 +1,51 @@
+---
+
+---
+
+<section id="promotions" class="promotions">
+  <div class="container">
+    <h2 tabindex="0">Promociones Especiales</h2>
+    <div class="promo-content">
+      <div class="promo-video">
+        <p id="promo-video-description" class="sr-only" tabindex="0">
+          El siguiente video mostrará una publicidad sobre zapatos ADIDAS. Este
+          se reproducirá automáticamente una vez aplaste la tecla TAB.
+        </p>
+        <video id="promoVideo" tabindex="0">
+          <source src="/videos/promotion.mp4" type="video/mp4" />
+        </video>
+      </div>
+
+      <script>
+        const video = document.getElementById("promoVideo") as HTMLVideoElement;
+
+        video.addEventListener("focus", () => {
+          video.play();
+        });
+
+        video.addEventListener("blur", () => {
+          video.pause();
+        });
+
+        // Para asegurarse de que el video se detenga si se pierde el foco del navegador
+        window.addEventListener("blur", () => {
+          video.pause();
+        });
+      </script>
+
+      <div class="promo-text">
+        <h3 tabindex="0">¡Ofertas Irresistibles!</h3>
+        <p tabindex="0">
+          Descubre nuestras increíbles promociones y llévate los mejores zapatos
+          a precios inigualables. ¡No te pierdas estas oportunidades únicas!
+        </p>
+        <ul>
+          <li tabindex="0">2x1 en zapatos deportivos</li>
+          <li tabindex="0">30% de descuento en la segunda compra</li>
+          <li tabindex="0">Envío gratis en compras superiores a $100</li>
+        </ul>
+        <a href="#" class="btn" tabindex="0">Ver todas las ofertas</a>
+      </div>
+    </div>
+  </div>
+</section>

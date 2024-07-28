@@ -1,0 +1,44 @@
+---
+const testimonials = [
+  {
+    name: "María García",
+    text: "La mejor tienda de zapatos que he encontrado. ¡Calidad y buen precio!",
+    image: "/images/testimonial-1.jpg",
+  },
+  {
+    name: "Juan Pérez",
+    text: "Gran variedad de estilos y excelente atención al cliente. Muy recomendado.",
+    image: "/images/testimonial-2.jpg",
+  },
+  {
+    name: "Ana Martínez",
+    text: "Encontré los zapatos perfectos para mi boda. ¡El personal fue muy amable y paciente!",
+    image: "/images/testimonial-3.jpg",
+  },
+];
+---
+
+<section id="testimonials" class="testimonials">
+  <div class="container">
+    <h2 tabindex="0">Lo que dicen nuestros clientes</h2>
+    <div class="testimonial-grid">
+      {
+        testimonials.map((testimonial) => (
+          <div class="testimonial-card">
+            <img
+              src={testimonial.image}
+              alt={`Foto de ${testimonial.name}`}
+              tabindex="0"
+            />
+            <p class="testimonial-text" tabindex="0">
+              "{testimonial.text}"
+            </p>
+            <p class="testimonial-name" tabindex="0">
+              - {testimonial.name}
+            </p>
+          </div>
+        ))
+      }
+    </div>
+  </div>
+</section>

@@ -1,0 +1,8 @@
+ASTRO
+npm create astro@latest
+
+npm run dev
+
+npx astro add react
+
+npx astro add tailwind

@@ -1,0 +1,44 @@
+---
+const products = [
+  {
+    name: "Zapatillas Deportivas",
+    description: "Comodidad y rendimiento para tus entrenamientos",
+    price: 50.0,
+    image: "/images/zapatillas.jpg",
+  },
+  {
+    name: "Zapatos Formales",
+    description: "Elegancia y estilo para ocasiones especiales",
+    price: 80.0,
+    image: "/images/formales.jpg",
+  },
+  {
+    name: "Sandalias de Verano",
+    description: "Frescura y comodidad para los días soleados",
+    price: 30.0,
+    image: "/images/sandalias.jpg",
+  },
+];
+---
+
+<section id="products" class="products">
+  <h2 tabindex="0">Nuestros Productos</h2>
+  <div class="product-grid">
+    {
+      products.map((product) => (
+        <div class="product-card">
+          <img
+            src={product.image}
+            alt={`Imagen de ${product.name}`}
+            tabindex="0"
+          />
+          <h3 tabindex="0">{product.name}</h3>
+          <p tabindex="0">{product.description}</p>
+          <p class="price" tabindex="0">
+            ${product.price.toFixed(2)}
+          </p>
+        </div>
+      ))
+    }
+  </div>
+</section>
